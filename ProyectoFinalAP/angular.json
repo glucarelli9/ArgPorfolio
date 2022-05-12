@@ -32,11 +32,10 @@
             ],
             "styles": [
               "src/styles.scss",
-              "ProyectoFinalAP/node_modules/bootstrap/scss/bootstrap.scss",
-              "ProyectoFinalAP/node_modules/bootstrap/dist/css/bootstrap.css"
+              "node_modules/bootstrap/dist/css/bootstrap.css"
             ],
             "scripts": [
-              "ProyectoFinalAP/node_modules/bootstrap/dist/js/bootstrap.js"
+              "node_modules/bootstrap/dist/js/bootstrap.js"
             ]
           },
           "configurations": {
