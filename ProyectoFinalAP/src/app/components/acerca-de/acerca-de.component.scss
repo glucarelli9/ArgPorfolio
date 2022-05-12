@@ -1,0 +1,27 @@
+.row{
+    padding: 10px;
+}
+div{
+    text-align: center;
+}
+@media (min-width: 576px){
+    #fotoperfil{
+        position: absolute;
+        width: 15%;
+        left: 2%;
+        margin-top: -150px;
+     
+    }
+}
+.img-fluid{
+    border-radius:50px;
+    border:3px solid rgb(142, 182, 201);
+}
+#nombre{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font: bold;
+    margin-top: 3%;
+}
+#Fullstack{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
