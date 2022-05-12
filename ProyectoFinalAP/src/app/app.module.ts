@@ -13,6 +13,9 @@ import { ExpComponent } from './components/exp/exp.component';
 import { EducComponent } from './components/educ/educ.component';
 import { HysComponent } from './components/hys/hys.component';
 import { HtmlParser } from '@angular/compiler';
+import { ProyectoComponent } from './components/proyecto/proyecto.component';
+import { MatSliderModule } from '@angular/material/slider';
+import { FooterComponent } from './components/footer/footer.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -23,7 +26,9 @@ import { HtmlParser } from '@angular/compiler';
     AcercaDeComponent,
     ExpComponent,
     EducComponent,
-    HysComponent
+    HysComponent,
+    ProyectoComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
@@ -33,15 +38,14 @@ import { HtmlParser } from '@angular/compiler';
       "backgroundPadding": 7,
       "radius": 60,
       "space": -2,
-      "outerStrokeWidth": 2,
+      "outerStrokeWidth": 7,
       "outerStrokeColor": "#8eb6c9",
       "innerStrokeColor": "#e7e8ea",
       "innerStrokeWidth": 2,
       "animateTitle": false,
       "animationDuration": 1000,
       "showUnits": false,
-      "clockwise": false,
-      
+      "clockwise": false
     })
   ],
   providers: [],
