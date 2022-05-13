@@ -1,10 +1,10 @@
+import { RouterModule } from '@angular/router';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgCircleProgressModule } from 'ng-circle-progress';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
 import { LogoArgPComponent } from './components/logo-arg-p/logo-arg-p.component';
-import { SocialComponent } from './components/social/social.component';
 import { BannerComponent } from './components/banner/banner.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { AcercaDeComponent } from './components/acerca-de/acerca-de.component';
@@ -14,13 +14,14 @@ import { HysComponent } from './components/hys/hys.component';
 import { ProyectoComponent } from './components/proyecto/proyecto.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { LoginComponent } from './components/login/login.component';
-import { routing } from './app.routing';
+import { AppRoutingModule } from './app-routing.module';
+import { PortadaComponentComponent } from './portada-component/portada-component.component';
+
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     LogoArgPComponent,
-    SocialComponent,
     BannerComponent,
     AcercaDeComponent,
     ExpComponent,
@@ -28,12 +29,14 @@ import { routing } from './app.routing';
     HysComponent,
     ProyectoComponent,
     FooterComponent,
-    LoginComponent
+    LoginComponent,
+    PortadaComponentComponent
   ],
   imports: [
     NgbModule,
     BrowserModule,
-    routing,
+    AppRoutingModule,
+    RouterModule,
     NgCircleProgressModule.forRoot({
       "backgroundPadding": 7,
       "radius": 60,
