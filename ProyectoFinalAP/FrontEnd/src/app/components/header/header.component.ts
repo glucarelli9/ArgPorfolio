@@ -1,4 +1,7 @@
+import { UsuariosService } from './../../services/usuarios.service';
+import { Usuario } from './../../model/usuario';
 import { Component, OnInit } from '@angular/core';
+import { HttpErrorResponse } from '@angular/common/http';
 
 @Component({
   selector: 'app-header',
@@ -6,10 +9,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
+ 
 
-  constructor() { }
+  constructor(){
 
+  }
   ngOnInit(): void {
+    
   }
 
 }

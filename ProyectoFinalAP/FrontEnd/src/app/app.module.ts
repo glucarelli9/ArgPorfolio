@@ -16,6 +16,10 @@ import { FooterComponent } from './components/footer/footer.component';
 import { LoginComponent } from './components/login/login.component';
 import { AppRoutingModule } from './app-routing.module';
 import { PortadaComponentComponent } from './portada-component/portada-component.component';
+import {HttpClientModule } from '@angular/common/http';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatInputModule} from '@angular/material/input';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -37,6 +41,10 @@ import { PortadaComponentComponent } from './portada-component/portada-component
     BrowserModule,
     AppRoutingModule,
     RouterModule,
+    FormsModule,
+    HttpClientModule,
+    MatInputModule,
+    MatFormFieldModule,
     NgCircleProgressModule.forRoot({
       "backgroundPadding": 7,
       "radius": 60,

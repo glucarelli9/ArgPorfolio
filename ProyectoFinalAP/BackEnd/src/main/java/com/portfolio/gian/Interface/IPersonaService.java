@@ -6,11 +6,11 @@ import java.util.List;
 
 public interface IPersonaService {
         // persona pull
-    public List<Persona> getPersona();
+    public List<Persona> traerPersona();
     
     
     // Guardar un Objeto
-    
+
     public void savePersona(Persona persona);
     
     // Eliminar User

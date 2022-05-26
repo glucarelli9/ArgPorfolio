@@ -1,17 +1,18 @@
 <app-banner></app-banner>
-<div class="row">
+<div class="row" *ngIf="usuario">
         <div class="col-xs-12 col-sm-2 col-md-2 col-lg-2">
-        <img src="../../../assets/perfilfoto.jpg" alt="" class="img-fluid" id="fotoperfil"> 
+        <img src="{{usuario.img}}" alt="" class="img-fluid" id="fotoperfil"> 
         
     </div>
      <div class="col-xs-12 col-sm-2 col-md-2 col-lg-2">
-        <p id="nombre"><strong>Gianfranco Lucarelli</strong></p>
-        <p id="Fullstack">Full Stack Developer Jr.</p>
+        <p id="nombre"><strong> {{usuario.nombre}} {{usuario.apellido}} </strong></p>
+        <p id="Fullstack">{{usuario.titulo}}</p>
      </div>
  <div class="col-xs-12 col-sm-8 col-md-8 col-lg-8">
         <span>
-            <h1>Acerca de:</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro nostrum officiis, alias expedita, nemo adipisci quisquam autem fuga dolore itaque sint, fugit placeat! Consectetur, veniam delectus! Repellat, vel sint! Officiis.</p>
+            <h1>
+            <p>{{usuario.descipcion}}</p>
+        </h1>
         </span>
     </div>
 </div>

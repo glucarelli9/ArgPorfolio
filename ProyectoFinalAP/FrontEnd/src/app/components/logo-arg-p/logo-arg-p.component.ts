@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import { LoginComponent } from '../login/login.component';
 @Component({
   selector: 'app-logo-arg-p',
   templateUrl: './logo-arg-p.component.html',
@@ -11,5 +11,5 @@ export class LogoArgPComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
+  
 }
