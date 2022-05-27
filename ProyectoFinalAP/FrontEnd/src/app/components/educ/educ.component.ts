@@ -13,7 +13,7 @@ export class EducComponent implements OnInit {
 
   public educaciones:Education[]=[];
   public editEducation:Education | undefined;
-  public DeleteEducation:Education | undefined;
+  public deleteEducation:Education | undefined;
   
 
   constructor(private Education:EducationService) { }
@@ -36,16 +36,17 @@ export class EducComponent implements OnInit {
   public onOpenModal(mode:String, educacion?:Education):void{
     const container = document.getElementById('main-container');
     const button = document.createElement('button');
+    button.type = 'button';
     button.style.display='none';
     button.setAttribute('data-toggle','modal');
     if(mode === 'agregar'){
-      button.setAttribute('data-target','#agregarEducacionModal')
+      button.setAttribute('data-target','#agregarEducacionModal');
     } else if(mode === 'delete'){
-      this.DeleteEducation = educacion;
-      button.setAttribute('data-target','#deleteEducacionModal')
+      this.deleteEducation = educacion;
+      button.setAttribute('data-target','#deleteEducacionModal');
     }else if(mode === 'edit'){
       this.editEducation = educacion;
-      button.setAttribute('data-target','#editarEducacionModal')
+      button.setAttribute('data-target','#editarEducacionModal');
     }
 
     container?.appendChild(button);
@@ -66,6 +67,7 @@ export class EducComponent implements OnInit {
       }
     })
   }
+  
   // Funcion Editar
   public onEditarEducation(education:Education){
     this.editEducation=education;
@@ -73,7 +75,7 @@ export class EducComponent implements OnInit {
     this.Education.editarEducacion(education).subscribe({
       next:(response:Education) =>{
         console.log(response);
-        this.getEducacion()
+        this.getEducacion();
       },
       error:(error:HttpErrorResponse)=>{
         alert(error.message);
